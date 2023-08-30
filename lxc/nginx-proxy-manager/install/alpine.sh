@@ -7,7 +7,7 @@ TEMPLOG="$TEMPDIR/tmplog"
 TEMPERR="$TEMPDIR/tmperr"
 LASTCMD=""
 WGETOPT="-t 1 -T 15 -q"
-DEVDEPS="npm g++ make gcc git python3-dev musl-dev libffi-dev openssl-dev"
+DEVDEPS="npm g++ make gcc git musl-dev libffi-dev openssl-dev"
 NPMURL="https://github.com/NginxProxyManager/nginx-proxy-manager"
 
 cd $TEMPDIR
@@ -89,7 +89,7 @@ runcmd apk upgrade
 
 # Install dependancies
 log "Installing dependencies"
-runcmd 'apk add python3 openresty nodejs yarn openssl apache2-utils logrotate $DEVDEPS'
+runcmd 'apk add openresty nodejs yarn openssl apache2-utils logrotate $DEVDEPS'
 
 # Setup python env and PIP
 log "Setting up python"
